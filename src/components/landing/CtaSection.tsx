@@ -22,7 +22,7 @@ export function CtaSection({ onBookDemo }: CtaSectionProps) {
           className="hero-btn hero-btn-primary landing-cta-btn"
           onClick={onBookDemo}
         >
-          Get Free Consultation
+          Schedule Consultation
         </button>
       </div>
     </section>

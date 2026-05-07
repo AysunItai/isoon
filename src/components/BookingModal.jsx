@@ -59,7 +59,7 @@ export function BookingModal({ isOpen, onClose }) {
           <span aria-hidden="true">×</span>
         </button>
         <h2 id="booking-modal-title" className="booking-modal-title">
-          Get a free consultation
+          Schedule a consultation
         </h2>
         <p className="booking-modal-lede">
           Pick a time that works for you — we&apos;ll walk through AutoEmail AI.

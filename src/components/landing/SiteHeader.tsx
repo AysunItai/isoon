@@ -35,7 +35,7 @@ export function SiteHeader({ onBookDemo }: SiteHeaderProps) {
           className="hero-btn hero-btn-primary site-header-cta"
           onClick={onBookDemo}
         >
-          Get Free Consultation
+          Schedule Consultation
         </button>
       </div>
     </header>
