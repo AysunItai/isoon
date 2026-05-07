@@ -1,0 +1,141 @@
+.booking-modal-root {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 4vw, 2rem);
+  box-sizing: border-box;
+}
+
+.booking-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  background: rgba(0, 8, 6, 0.78);
+  backdrop-filter: blur(6px);
+}
+
+.booking-modal-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(920px, 100%);
+  max-height: min(92vh, 900px);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow-y: auto;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  padding-top: clamp(2.75rem, 5vw, 3.25rem);
+  box-sizing: border-box;
+  background: linear-gradient(165deg, #001f16 0%, #00160f 55%, #00140d 100%);
+  border: 1px solid rgba(0, 255, 65, 0.22);
+  border-radius: 16px;
+  box-shadow:
+    0 0 0 1px rgba(140, 255, 185, 0.12),
+    0 24px 80px rgba(0, 0, 0, 0.55);
+}
+
+.booking-modal-close {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgba(0, 255, 65, 0.35);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.booking-modal-close:hover {
+  background: rgba(0, 255, 65, 0.12);
+  border-color: rgba(0, 255, 65, 0.65);
+  color: #00ff41;
+}
+
+.booking-modal-close:focus-visible {
+  outline: 2px solid #00ff41;
+  outline-offset: 2px;
+}
+
+.booking-modal-title {
+  margin: 0 2.75rem 0.35rem 0;
+  font-family: var(--heading);
+  font-size: clamp(1.25rem, 2.8vw, 1.55rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.booking-modal-lede {
+  margin: 0 2.75rem 1rem 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.booking-modal-calendly {
+  flex: 0 0 auto;
+  width: 100%;
+  min-height: 600px;
+  height: 700px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 255, 65, 0.15);
+  background: #fff;
+}
+
+/* Explicit embed box — % heights on the widget collapse under flex parents */
+.booking-modal-cal-widget {
+  width: 100% !important;
+  height: 700px !important;
+  min-height: 600px !important;
+  max-width: 100%;
+}
+
+.booking-modal-calendly iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .booking-modal-root {
+    align-items: center;
+    padding: clamp(0.75rem, 3vw, 1rem);
+  }
+
+  .booking-modal-dialog {
+    width: 100%;
+    max-height: min(96vh, 780px);
+    border-radius: 16px;
+    padding: clamp(1rem, 3vw, 1.35rem);
+    padding-top: clamp(2.5rem, 6vw, 2.85rem);
+  }
+
+  .booking-modal-calendly {
+    min-height: 560px;
+    height: 600px;
+  }
+
+  .booking-modal-cal-widget {
+    height: 600px !important;
+    min-height: 560px !important;
+  }
+}
